@@ -1,0 +1,202 @@
+:root {
+    --bg-color: #050505;
+    --text-main: #f0f0f0;
+    --text-muted: #888888;
+    --accent: #ff3366; /* A subtle cyberpunk red/pink */
+    --accent-glow: rgba(255, 51, 102, 0.5);
+    
+    --font-main: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Particles Background */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; /* Let clicks pass through */
+}
+
+/* Content wrapper needs relative positioning to sit above particles */
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.highlight {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Glitch Effect for Title */
+.glitch-wrapper {
+    margin-bottom: 1rem;
+}
+
+.glitch {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    position: relative;
+    color: var(--text-main);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Simple pseudo-glitch on hover */
+.glitch:hover {
+    color: var(--accent);
+    text-shadow: 2px 2px 0px #00ffff, -2px -2px 0px #ff00ff;
+    transition: all 0.2s ease;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+}
+
+.studio {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tech-text {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Vision Section */
+.vision {
+    padding: 8rem 0;
+    background: linear-gradient(to bottom, transparent, rgba(10,10,10,0.8) 20%, rgba(10,10,10,0.8) 80%, transparent);
+}
+
+.vision h2 {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.vision-card {
+    border-top: 1px solid var(--accent);
+    padding-top: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2rem;
+    border-radius: 0 0 8px 8px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.vision-card h3 {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.vision-card p {
+    color: var(--text-muted);
+}
+
+/* Contact Section */
+.contact {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    font-family: var(--font-mono);
+    text-decoration: none;
+    color: var(--bg-color);
+    background-color: var(--accent);
+    padding: 1rem 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 1px solid var(--accent);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
