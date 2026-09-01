@@ -25,16 +25,15 @@ body {
 
 /* Particles Background */
 #particles-js {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
-    pointer-events: none; /* Let clicks pass through */
 }
 
-/* Content wrapper needs relative positioning to sit above particles */
+/* Content wrapper */
 .content-wrapper {
     position: relative;
     z-index: 1;
@@ -63,6 +62,7 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero {
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -70,6 +70,13 @@ h1, h2, h3 {
     align-items: center;
     text-align: center;
     padding: 2rem;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    pointer-events: none; /* Deixa passar el ratolí cap a les partícules */
 }
 
 /* Glitch Effect for Title */
@@ -83,6 +90,7 @@ h1, h2, h3 {
     position: relative;
     color: var(--text-main);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    pointer-events: auto; /* Perquè l'efecte glitch detecti el ratolí */
 }
 
 /* Simple pseudo-glitch on hover */
@@ -109,6 +117,47 @@ h1, h2, h3 {
     color: var(--accent);
     font-size: 0.9rem;
     opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.runic-icon-large {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+    opacity: 0.9;
+    /* Com que tota la secció té pointer-events: none per deixar passar el ratolí, 
+       això és per si en el futur voleu fer click a l'icona */
+    pointer-events: auto; 
+    transition: transform 0.3s ease;
+}
+
+.runic-icon-large:hover {
+    transform: scale(1.1);
+}
+
+/* Trailer Section */
+.trailer-section {
+    padding: 0 0 4rem 0; /* Espai entre el hero i els pilars */
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 per a YouTube */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5); /* Fons mentre carrega */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Vision Section */

@@ -62,11 +62,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         },
         "interactivity": {
-            "detect_on": "canvas",
+            "detect_on": "window",
             "events": {
                 "onhover": {
                     "enable": true,
-                    "mode": "grab"
+                    "mode": "repulse"
                 },
                 "onclick": {
                     "enable": true,
@@ -75,11 +75,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 "resize": true
             },
             "modes": {
-                "grab": {
-                    "distance": 140,
-                    "line_linked": {
-                        "opacity": 0.5
-                    }
+                "repulse": {
+                    "distance": 100,
+                    "duration": 0.4
                 },
                 "push": {
                     "particles_nb": 4
