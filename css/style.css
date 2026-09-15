@@ -244,6 +244,35 @@ h1, h2, h3 {
 
 .vision-card p {
     color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.engine-link {
+    display: inline-block;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.engine-link:hover {
+    color: var(--text-main);
+    transform: translateX(5px);
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 0 8rem 0;
+    background: linear-gradient(to top, transparent, rgba(10,10,10,0.8) 20%, rgba(10,10,10,0.8) 80%, transparent);
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: var(--text-main);
 }
 
 /* Team Section */
