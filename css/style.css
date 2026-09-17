@@ -1,9 +1,9 @@
 :root {
-    --bg-color: #050505;
-    --text-main: #f0f0f0;
-    --text-muted: #888888;
-    --accent: #ff3366; /* A subtle cyberpunk red/pink */
-    --accent-glow: rgba(255, 51, 102, 0.5);
+    --bg-color: #0d071a; /* Darkest purple for background */
+    --text-main: #e8d5f9; /* Light purple-white for text */
+    --text-muted: #7c6d99; /* Muted indigo/purple */
+    --accent: #9c3ee8; /* Electric purple from the palette */
+    --accent-glow: rgba(156, 62, 232, 0.5);
     
     --font-main: 'Inter', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;

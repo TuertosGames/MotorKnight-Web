@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Particles.js configuration
-    particlesJS('particles-js', {
+    if (document.getElementById('particles-js')) {
+        particlesJS('particles-js', {
         "particles": {
             "number": {
                 "value": 80,
@@ -85,7 +86,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         },
         "retina_detect": true
-    });
+        });
+    }
 
     // Scroll Reveal Animation
     function reveal() {
