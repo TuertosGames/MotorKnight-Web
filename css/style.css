@@ -352,6 +352,7 @@ h1, h2, h3 {
     letter-spacing: 1px;
     border: 1px solid var(--accent);
     transition: all 0.3s ease;
+    pointer-events: auto;
 }
 
 .btn:hover {
@@ -368,4 +369,61 @@ footer {
     font-size: 0.8rem;
     color: var(--text-muted);
     border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+.reveal.active-reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar active link */
+.nav-links a.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 4px;
+}
+
+/* Icon Styles */
+.ph {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Engine Page Styles */
+.engine-hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: radial-gradient(circle at center, rgba(10,10,10,0.8) 0%, var(--bg-color) 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.runic-icon-giant {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 2rem;
+    animation: pulseGlow 3s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    from { filter: drop-shadow(0 0 10px rgba(255,255,255,0.1)); }
+    to { filter: drop-shadow(0 0 25px rgba(255,255,255,0.3)); }
+}
+
+.engine-details {
+    padding: 6rem 0;
 }

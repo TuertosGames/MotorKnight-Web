@@ -86,4 +86,21 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         "retina_detect": true
     });
+
+    // Scroll Reveal Animation
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 100;
+            
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active-reveal");
+            }
+        }
+    }
+    
+    window.addEventListener("scroll", reveal);
+    reveal(); // Trigger on load
 });
